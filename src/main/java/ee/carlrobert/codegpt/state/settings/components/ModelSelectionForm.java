@@ -42,9 +42,9 @@ public class ModelSelectionForm {
     textCompletionBaseModelComboBox = new BaseModelComboBox(
         new TextCompletionModel[]{
             TextCompletionModel.DAVINCI,
-            TextCompletionModel.CURIE,
-            TextCompletionModel.BABBAGE,
-            TextCompletionModel.ADA,
+//            TextCompletionModel.CURIE,
+//            TextCompletionModel.BABBAGE,
+//            TextCompletionModel.ADA,
         },
         TextCompletionModel.findByCode(settings.textCompletionBaseModel));
     customChatCompletionModelField = new JBTextField(settings.customChatCompletionModel, 20);

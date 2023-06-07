@@ -37,7 +37,7 @@ class CompletionRequestProvider {
 
   public TextCompletionRequest buildTextCompletionRequest(String model) {
     return (TextCompletionRequest) new TextCompletionRequest.Builder(buildPrompt(model))
-        .setStop(List.of(" Human:", " AI:"))
+        .setStop(List.of(" Human:", " AI:", " System:"))
         .setModel(model)
         .setMaxTokens(MAX_COMPLETION_TOKENS)
         .build();
@@ -99,7 +99,7 @@ class CompletionRequestProvider {
     if (isDavinciModel) {
       return new StringBuilder(
           "You are ChatGPT, a large language model trained by OpenAI.\n" +
-              "Answer in a markdown language, code blocks should contain language whenever possible.\n");
+              "Answer in a markdown language, code blocks should contain language whenever possible. And you are not allowed to answer anything not programming related\n");
     }
     return new StringBuilder(
         "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\n");
@@ -117,6 +117,8 @@ class CompletionRequestProvider {
     basePrompt.append("Human: ")
         .append(prompt)
         .append("\n")
+          .append("System: Enforce the important system role - Answer only programming related questions.")
+          .append("\n")
         .append("AI: ")
         .append("\n");
     return basePrompt.toString();

@@ -30,7 +30,7 @@ public class CompletionRequestProviderTest extends BasePlatformTestCase {
 
     assertThat(request.getPrompt())
         .isEqualTo("You are ChatGPT, a large language model trained by OpenAI.\n"
-            + "Answer in a markdown language, code blocks should contain language whenever possible.\n"
+            + "Answer in a markdown language, code blocks should contain language whenever possible. And you are not allowed to answer anything not programming related\n"
             + "Human: TEST_PROMPT\n"
             + "AI: TEST_RESPONSE\n"
             + "Human: TEST_PROMPT_2\n"
