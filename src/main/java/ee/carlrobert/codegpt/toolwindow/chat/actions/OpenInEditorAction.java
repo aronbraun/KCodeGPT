@@ -42,7 +42,7 @@ public class OpenInEditorAction extends AnAction {
           .collect(Collectors.joining());
       VirtualFile file = new LightVirtualFile(fileName, fileContent);
       FileEditorManager.getInstance(project).openFile(file, true);
-      var toolWindow = requireNonNull(ToolWindowManager.getInstance(project).getToolWindow("CodeGPT"));
+      var toolWindow = requireNonNull(ToolWindowManager.getInstance(project).getToolWindow("KCodeGPT"));
       toolWindow.hide();
     }
   }

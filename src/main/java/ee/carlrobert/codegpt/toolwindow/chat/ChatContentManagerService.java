@@ -69,6 +69,6 @@ public class ChatContentManagerService {
   }
 
   private ToolWindow getToolWindow() {
-    return requireNonNull(ToolWindowManager.getInstance(project).getToolWindow("CodeGPT"));
+    return requireNonNull(ToolWindowManager.getInstance(project).getToolWindow("KCodeGPT"));
   }
 }
