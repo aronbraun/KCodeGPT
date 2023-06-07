@@ -53,6 +53,8 @@ class CompletionRequestProvider {
       messages.add(new ChatCompletionMessage("assistant", message.getResponse()));
     });
     messages.add(new ChatCompletionMessage("user", prompt));
+    messages.add(new ChatCompletionMessage("system", "This is a system role - Answer only programming related questions."));
+
 
     // Do not calculate total usage for custom services
     if (SettingsState.getInstance().useCustomService) {
