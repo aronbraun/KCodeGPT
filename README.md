@@ -2,10 +2,16 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/carlrobertoh/CodeGPT">
+  <a href="https://github.com/aronbraun/KCodeGPT">
     <img alt="plugin-icon" src="docs/assets/icon.png">
   </a>
-  <h1 style="margin: 0;" align="center">CodeGPT</h1>
+  <h1 style="margin: 0;" align="center">KCodeGPT</h1>
+  <h3>The Kosher CodeGPT</h3>
+  <p>
+    This project is a fork of 
+          <a href="https://github.com/carlrobertoh/CodeGPT">CodeGPT</a>,
+    modified to answer only programming-related questions.
+  </p>
   <p>
     A JetBrains extension that allows you to use ChatGPT inside your favourite IDE
   </p>
@@ -38,7 +44,8 @@
 ## About The Project
 
 This is an extension for JetBrains IDEs that integrates ChatGPT into your coding environment.
-By leveraging the power of GPT-3, this makes it an invaluable tool for developers looking to streamline their workflow and gain a deeper understanding of the code they're working on.
+By leveraging the power of GPT-3, this makes it an invaluable tool for developers looking to streamline their workflow
+and gain a deeper understanding of the code they're working on.
 
 ## Getting Started
 
@@ -62,16 +69,22 @@ On the `Marketplace` tab simply search for `codegpt` and select the `CodeGPT` su
 After the plugin has been successfully installed, the API key needs to be configured.
 
 You can configure the key by going to the plugin's settings via the `File | Settings/Preferences | Tools | CodeGPT`.
-On the settings panel simply click on the `API key` field, paste the key obtained from the OpenAI website and click `Apply/OK`:
+On the settings panel simply click on the `API key` field, paste the key obtained from the OpenAI website and
+click `Apply/OK`:
 
 ![plugin-settings][plugin-settings]
 
 #### Azure OpenAI configuration
+
 Specifically for Azure OpenAI services, you will have to input three supplementary fields:
-* the `Resource Name`, which is the name of your Azure OpenAI Cognitive Services. It's the first part of the url you're provided to use the service: `https://my-resource-name.openai.azure.com/` -> use `my-resource-name`. You can find it in your Azure Cognitive Services page, under `Resource Management` -> `Resource Management` -> `Keys and Endpoints`.
-* the `Deployment ID`, which is the name of your Deployment. You can find it in the Azure AI Studio, under `Management` -> `Deployment` -> `Deployment Name` column in the table.
-* the `API Version`, I usually used the last non-preview version, which is currently `2023-05-15`. 
-In addition to these, you need to input one of the two API Keys provided, found along with the `Resource Name`.
+
+* the `Resource Name`, which is the name of your Azure OpenAI Cognitive Services. It's the first part of the url you're
+  provided to use the service: `https://my-resource-name.openai.azure.com/` -> use `my-resource-name`. You can find it
+  in your Azure Cognitive Services page, under `Resource Management` -> `Resource Management` -> `Keys and Endpoints`.
+* the `Deployment ID`, which is the name of your Deployment. You can find it in the Azure AI Studio,
+  under `Management` -> `Deployment` -> `Deployment Name` column in the table.
+* the `API Version`, I usually used the last non-preview version, which is currently `2023-05-15`.
+  In addition to these, you need to input one of the two API Keys provided, found along with the `Resource Name`.
 
 ## Features
 
@@ -111,10 +124,12 @@ Expected a different answer? Re-generate any response of your choosing.
 
 ### Other features
 
-- **Conversation History** - View recent conversation history and restore previous sessions, making it easy to pick up where you left off
+- **Conversation History** - View recent conversation history and restore previous sessions, making it easy to pick up
+  where you left off
 - **Concurrent conversations** - Chat with the AI in multiple tabs simultaneously
 - **Seamless conversations** - Chat with the AI regardless of the maximum token limitations
-- **Predefined Actions** - Create your own editor actions or override the existing ones, saving time rewriting the same prompt repeatedly
+- **Predefined Actions** - Create your own editor actions or override the existing ones, saving time rewriting the same
+  prompt repeatedly
 
 ## Roadmap
 
@@ -125,11 +140,11 @@ Expected a different answer? Re-generate any response of your choosing.
 - [ ] Add codex and user's fine-tuned models
 - [x] Ability to have a seamless conversation despite to token limitation
 - [x] Add support for copying and replacing generated code snippets
-- [x] Add support for deleting previous conversations  
+- [x] Add support for deleting previous conversations
 - [x] Add support for overriding prompts and request params
 - [x] Add Azure OpenAI service support
 - [x] Add action key mappings
-- [ ] Add support for code search using embeddings 
+- [ ] Add support for code search using embeddings
 - [ ] Add support for model fine-tuning
 
 See the [open issues][open-issues] for a full list of proposed features (and known issues).
@@ -138,7 +153,8 @@ See the [open issues][open-issues] for a full list of proposed features (and kno
 
 MIT © [Carl-Robert Linnupuu][portfolio]
 
-If you found this project interesting, kindly rate it on the marketplace and don't forget to give it a star. Thanks again!
+If you found this project interesting, kindly rate it on the marketplace and don't forget to give it a star. Thanks
+again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -146,13 +162,23 @@ If you found this project interesting, kindly rate it on the marketplace and don
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [downloads-shield]: https://img.shields.io/jetbrains/plugin/d/21056-codegpt
+
 [version-shield]: https://img.shields.io/jetbrains/plugin/v/21056-codegpt?label=version
+
 [rating-shield]: https://img.shields.io/jetbrains/plugin/r/rating/21056-codegpt
+
 [contributions-not-available-svg]: https://img.shields.io/badge/Contributions-Currently%20Unavailable-yellow
+
 [contributions-not-available]: #
+
 [marketplace-img]: docs/assets/marketplace.png
+
 [plugin-repo]: https://plugins.jetbrains.com/plugin/21056-codegpt
+
 [plugin-settings]: docs/assets/plugin-settings.png
+
 [open-issues]: https://github.com/carlrobertoh/CodeGPT/issues
+
 [api-key-url]: https://platform.openai.com/account/api-keys
+
 [portfolio]: https://carlrobert.ee
