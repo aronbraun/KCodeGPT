@@ -1,8 +1,9 @@
 <idea-plugin>
-    <id>ee.carlrobert.chatgpt</id>
-    <name>CodeGPT</name>
+    <id>com.abraun.kcodegpt</id>
+    <name>KCodeGPT</name>
     <vendor email="carlrobertoh@gmail.com" url="https://carlrobert.ee">Carl-Robert Linnupuu</vendor>
     <description><![CDATA[
+    <p>Clone of <a href="https://plugins.jetbrains.com/plugin/21056-codegpt">CodeGPT<a/>, modified to answer only programming-related questions.</p>
     <p><b>ChatGPT as your copilot to level up your developer experience.</b></p>
     <p>
       This is the perfect assistant for any programmer who wants to improve their coding skills
@@ -13,7 +14,7 @@
     <p>In order to use the extension, you need to have the API key configured. You can find the API key in your <a href="https://platform.openai.com/account/api-keys">User Settings</a>.</p>
     <h3>API Key Configuration</h3>
     <p>After the plugin has been successfully installed, the API key needs to be configured.
-    <p>You can configure the key by going to the plugin's settings via the <b>File | Settings/Preferences | Tools | CodeGPT</b>. On the settings panel simply click
+    <p>You can configure the key by going to the plugin's settings via the <b>File | Settings/Preferences | Tools | KCodeGPT</b>. On the settings panel simply click
     on the API key field, paste the key obtained from the OpenAI website and click <b>Apply/OK</b>.</p>
     <h2>Features</h2>
     <ul>
@@ -68,7 +69,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <postStartupActivity implementation="ee.carlrobert.codegpt.PluginStartupActivity"/>
-        <applicationConfigurable id="settings.codegpt" parentId="tools" displayName="CodeGPT"
+        <applicationConfigurable id="settings.codegpt" parentId="tools" displayName="KCodeGPT"
             instance="ee.carlrobert.codegpt.state.settings.SettingsConfigurable"/>
         <applicationConfigurable id="settings.codegpt.configuration" parentId="settings.codegpt" displayName="Configuration"
             instance="ee.carlrobert.codegpt.state.settings.configuration.ConfigurationConfigurable"/>
@@ -79,14 +80,14 @@
         <applicationService serviceImplementation="ee.carlrobert.codegpt.state.settings.advanced.AdvancedSettingsState"/>
         <applicationService serviceImplementation="ee.carlrobert.codegpt.state.conversations.ConversationsState"/>
         <projectService serviceImplementation="ee.carlrobert.codegpt.toolwindow.chat.ChatContentManagerService"/>
-        <toolWindow id="CodeGPT" icon="Icons.ToolWindowIcon" anchor="right"
+        <toolWindow id="KCodeGPT" icon="Icons.ToolWindowIcon" anchor="right"
             factoryClass="ee.carlrobert.codegpt.toolwindow.ProjectToolWindowFactory"/>
     </extensions>
 
     <resource-bundle>messages.BasicActionsBundle</resource-bundle>
 
     <actions>
-        <group id="CodeGPTEditorPopup">
+        <group id="KCodeGPTEditorPopup">
             <group id="codegpt.EditorActionGroup" class="com.intellij.openapi.actionSystem.DefaultActionGroup" popup="true" icon="Icons.DefaultIcon">
             </group>
             <add-to-group group-id="EditorPopupMenu1" anchor="first"/>
